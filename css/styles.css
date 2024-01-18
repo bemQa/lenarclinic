@@ -1542,6 +1542,8 @@ body {
     }
 
     .card-text {
+        -webkit-line-clamp: 4;
+        margin-bottom: 20rem;
         font-size: 16rem;
     }
 

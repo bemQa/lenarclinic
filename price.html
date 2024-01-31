@@ -6,7 +6,6 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 
     <link rel="stylesheet" href="libs/blind/special.min.css">
-	<link rel="stylesheet" href="libs/fancybox/jquery.fancybox.min.css">
     <link rel="stylesheet" href="fonts/stylesheet.css"/>
 	<link rel="stylesheet" href="css/styles.css"/>
 
@@ -31,7 +30,7 @@
                 </a>
                 <div class="menu-links desktop-mobile-visible">
 					<a href="" class="menu-link">Услуги</a>
-					<a href="" class="menu-link">Стоимость</a>
+					<a href="" class="menu-link active">Стоимость</a>
 					<a href="" class="menu-link">ОМС</a>
 					<a href="" class="menu-link">Врачи</a>
 					<a href="" class="menu-link">О клинике</a>
@@ -47,7 +46,7 @@
 			<div class="menu-links-wrapper">
 				<div class="menu-links">
 					<a href="" class="menu-link">Услуги</a>
-					<a href="" class="menu-link">Стоимость</a>
+					<a href="" class="menu-link active">Стоимость</a>
 					<a href="" class="menu-link">ОМС</a>
 					<a href="" class="menu-link">Врачи</a>
 					<a href="" class="menu-link">О клинике</a>
@@ -87,117 +86,208 @@
 				</div>
 			</div>
 		</header>
-		<section class="section section-mainpage section-background">
+		<section class="section section-page-title section-background-title">
 			<div class="container">
-				<h1 class="page-title h1">Помогаем восстанавливать <br>и сохранять здоровое зрение</h1>
-				<div class="page-subtitle">25 лет мы оказываем полный комплекс офтальмологических услуг</div>
-				<div class="reviews-mainpage">
-					<a href="https://www.youtube.com/watch?v=4x4ZLMxGfgs" data-fancybox class="review-mainpage">
-						<img src="img/reviewer1.png" alt="Человек с отзывом">
-					</a>
-					<a href="https://www.youtube.com/watch?v=4x4ZLMxGfgs" data-fancybox class="review-mainpage">
-						<img src="img/reviewer2.png" alt="Человек с отзывом">
-					</a>
-					<a href="https://www.youtube.com/watch?v=4x4ZLMxGfgs" data-fancybox class="review-mainpage">
-						<img src="img/reviewer2.png" alt="Человек с отзывом">
-					</a>
-					<a href="https://www.youtube.com/watch?v=4x4ZLMxGfgs" data-fancybox class="review-mainpage">
-						<img src="img/reviewer1.png" alt="Человек с отзывом">
-					</a>
-					<a href="https://www.youtube.com/watch?v=4x4ZLMxGfgs" data-fancybox class="review-mainpage">
-						<img src="img/reviewer2.png" alt="Человек с отзывом">
-					</a>
-					<a href="https://www.youtube.com/watch?v=4x4ZLMxGfgs" data-fancybox class="review-mainpage">
-						<img src="img/reviewer1.png" alt="Человек с отзывом">
-					</a>
+				<h1 class="page-title h1">Стоимость услуг</h1>
+			</div>
+		</section>
+		<section class="section section-price">
+			<div class="container">
+				<div class="price-list accordion-wrap">
+					<div class="price-item">
+						<!-- если нужно показать категорию сразу при открытии страницы развернутой, то указываем класс active -->
+						<div class="price-item-title accordion-title active">Диагностика</div>
+						<!-- если нужно показать категории сразу при открытии страницы развернутой, то указываем style="display: block;" -->
+						<div class="price-item-content" style="display: block;">
+							<div class="price-item-table">
+								<div class="price-item-table-head">
+									<div class="price-item-table-head-text">Код операции</div>
+									<div class="price-item-table-head-text">Наименование операции</div>
+									<div class="price-item-table-head-text">Цена, руб.</div>
+								</div>
+								<div class="price-item-table-body">
+									<div class="price-item-table-element">
+										<div class="price-item-table-body-text">В03.029.001</div>
+										<div class="price-item-table-body-text">1.1 Комплекс исследований для диагностики нарушения зрения (диагностика (от 5 до 60 лет))*.</div>
+										<div class="price-item-table-body-text">2400 / 2900</div>
+									</div>
+									<div class="price-item-table-element">
+										<div class="price-item-table-body-text">В03.029.001</div>
+										<div class="price-item-table-body-text">Прием (осмотр, консультация) врача-офтальмолога / врача-офтальмолога к.м.н.</div>
+										<div class="price-item-table-body-text">2400 / 2900</div>
+									</div>
+									<div class="price-item-table-element">
+										<div class="price-item-table-body-text">А01.26.001</div>
+										<div class="price-item-table-body-text">Сбор анамнеза и жалоб при патологии глаза</div>
+										<div class="price-item-table-body-text">2400 / 2900</div>
+									</div>
+									<div class="price-item-table-element">
+										<div class="price-item-table-body-text">В03.029.001</div>
+										<div class="price-item-table-body-text">1.1 Комплекс исследований для диагностики нарушения зрения (диагностика (от 5 до 60 лет))*.</div>
+										<div class="price-item-table-body-text">2400 / 2900</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="price-item">
+						<div class="price-item-title accordion-title">Лазерная коррекция</div>
+						<div class="price-item-content">
+							<div class="price-item-table">
+								<div class="price-item-table-head">
+									<div class="price-item-table-head-text">Код операции</div>
+									<div class="price-item-table-head-text">Наименование операции</div>
+									<div class="price-item-table-head-text">Цена, руб.</div>
+								</div>
+								<div class="price-item-table-body">
+									<div class="price-item-table-element">
+										<div class="price-item-table-body-text">В03.029.001</div>
+										<div class="price-item-table-body-text">1.1 Комплекс исследований для диагностики нарушения зрения (диагностика (от 5 до 60 лет))*.</div>
+										<div class="price-item-table-body-text">2400 / 2900</div>
+									</div>
+									<div class="price-item-table-element">
+										<div class="price-item-table-body-text">В03.029.001</div>
+										<div class="price-item-table-body-text">1.1 Комплекс исследований для диагностики нарушения зрения (диагностика (от 5 до 60 лет))*.</div>
+										<div class="price-item-table-body-text">2400 / 2900</div>
+									</div>
+									<div class="price-item-table-element">
+										<div class="price-item-table-body-text">В03.029.001</div>
+										<div class="price-item-table-body-text">1.1 Комплекс исследований для диагностики нарушения зрения (диагностика (от 5 до 60 лет))*.</div>
+										<div class="price-item-table-body-text">2400 / 2900</div>
+									</div>
+									<div class="price-item-table-element">
+										<div class="price-item-table-body-text">В03.029.001</div>
+										<div class="price-item-table-body-text">1.1 Комплекс исследований для диагностики нарушения зрения (диагностика (от 5 до 60 лет))*.</div>
+										<div class="price-item-table-body-text">2400 / 2900</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="price-item">
+						<div class="price-item-title accordion-title">Катаракта</div>
+						<div class="price-item-content">
+							<div class="price-item-table">
+								<div class="price-item-table-head">
+									<div class="price-item-table-head-text">Код операции</div>
+									<div class="price-item-table-head-text">Наименование операции</div>
+									<div class="price-item-table-head-text">Цена, руб.</div>
+								</div>
+								<div class="price-item-table-body">
+									<div class="price-item-table-element">
+										<div class="price-item-table-body-text">В03.029.001</div>
+										<div class="price-item-table-body-text">1.1 Комплекс исследований для диагностики нарушения зрения (диагностика (от 5 до 60 лет))*.</div>
+										<div class="price-item-table-body-text">2400 / 2900</div>
+									</div>
+									<div class="price-item-table-element">
+										<div class="price-item-table-body-text">В03.029.001</div>
+										<div class="price-item-table-body-text">1.1 Комплекс исследований для диагностики нарушения зрения (диагностика (от 5 до 60 лет))*.</div>
+										<div class="price-item-table-body-text">2400 / 2900</div>
+									</div>
+									<div class="price-item-table-element">
+										<div class="price-item-table-body-text">В03.029.001</div>
+										<div class="price-item-table-body-text">1.1 Комплекс исследований для диагностики нарушения зрения (диагностика (от 5 до 60 лет))*.</div>
+										<div class="price-item-table-body-text">2400 / 2900</div>
+									</div>
+									<div class="price-item-table-element">
+										<div class="price-item-table-body-text">В03.029.001</div>
+										<div class="price-item-table-body-text">1.1 Комплекс исследований для диагностики нарушения зрения (диагностика (от 5 до 60 лет))*.</div>
+										<div class="price-item-table-body-text">2400 / 2900</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="price-item">
+						<div class="price-item-title accordion-title">Глаукома</div>
+						<div class="price-item-content">
+							<div class="price-item-table">
+								<div class="price-item-table-head">
+									<div class="price-item-table-head-text">Код операции</div>
+									<div class="price-item-table-head-text">Наименование операции</div>
+									<div class="price-item-table-head-text">Цена, руб.</div>
+								</div>
+								<div class="price-item-table-body">
+									<div class="price-item-table-element">
+										<div class="price-item-table-body-text">В03.029.001</div>
+										<div class="price-item-table-body-text">1.1 Комплекс исследований для диагностики нарушения зрения (диагностика (от 5 до 60 лет))*.</div>
+										<div class="price-item-table-body-text">2400 / 2900</div>
+									</div>
+									<div class="price-item-table-element">
+										<div class="price-item-table-body-text">В03.029.001</div>
+										<div class="price-item-table-body-text">1.1 Комплекс исследований для диагностики нарушения зрения (диагностика (от 5 до 60 лет))*.</div>
+										<div class="price-item-table-body-text">2400 / 2900</div>
+									</div>
+									<div class="price-item-table-element">
+										<div class="price-item-table-body-text">В03.029.001</div>
+										<div class="price-item-table-body-text">1.1 Комплекс исследований для диагностики нарушения зрения (диагностика (от 5 до 60 лет))*.</div>
+										<div class="price-item-table-body-text">2400 / 2900</div>
+									</div>
+									<div class="price-item-table-element">
+										<div class="price-item-table-body-text">В03.029.001</div>
+										<div class="price-item-table-body-text">1.1 Комплекс исследований для диагностики нарушения зрения (диагностика (от 5 до 60 лет))*.</div>
+										<div class="price-item-table-body-text">2400 / 2900</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="price-item">
+						<div class="price-item-title accordion-title">Кератоконус</div>
+						<div class="price-item-content">
+							<div class="price-item-table">
+								<div class="price-item-table-head">
+									<div class="price-item-table-head-text">Код операции</div>
+									<div class="price-item-table-head-text">Наименование операции</div>
+									<div class="price-item-table-head-text">Цена, руб.</div>
+								</div>
+								<div class="price-item-table-body">
+									<div class="price-item-table-element">
+										<div class="price-item-table-body-text">В03.029.001</div>
+										<div class="price-item-table-body-text">1.1 Комплекс исследований для диагностики нарушения зрения (диагностика (от 5 до 60 лет))*.</div>
+										<div class="price-item-table-body-text">2400 / 2900</div>
+									</div>
+									<div class="price-item-table-element">
+										<div class="price-item-table-body-text">В03.029.001</div>
+										<div class="price-item-table-body-text">1.1 Комплекс исследований для диагностики нарушения зрения (диагностика (от 5 до 60 лет))*.</div>
+										<div class="price-item-table-body-text">2400 / 2900</div>
+									</div>
+									<div class="price-item-table-element">
+										<div class="price-item-table-body-text">В03.029.001</div>
+										<div class="price-item-table-body-text">1.1 Комплекс исследований для диагностики нарушения зрения (диагностика (от 5 до 60 лет))*.</div>
+										<div class="price-item-table-body-text">2400 / 2900</div>
+									</div>
+									<div class="price-item-table-element">
+										<div class="price-item-table-body-text">В03.029.001</div>
+										<div class="price-item-table-body-text">1.1 Комплекс исследований для диагностики нарушения зрения (диагностика (от 5 до 60 лет))*.</div>
+										<div class="price-item-table-body-text">2400 / 2900</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="price-btn-wrapper">
+					<a href="" class="btn price-btn">Скачать прайс-лист</a>
 				</div>
 			</div>
 		</section>
-		<section class="section section-lenar-text">
+		<section class="section section-lenar-text section-lenar-text-innerpage">
 			<div class="container">
-				<h2 class="page-title h1">Клиника ЛЕНАР</h2>
 				<div class="lenar-text-block">
-					<div class="lenar-text-col">
+					<!-- если нужен текст меньшего шрифта, то добавить класс lenar-text-small-col -->
+					<div class="lenar-text-col lenar-text-small-col">
 						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Imperdiet nulla malesuada pellentesque elit. Sit amet dictum sit amet justo donec. Dui sapien eget mi proin. Consequat semper viverra nam libero justo laoreet sit amet cursus.</p>
 					</div>
-					<div class="lenar-text-col">
+					<div class="lenar-text-col lenar-text-small-col">
 						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Imperdiet nulla malesuada pellentesque elit. Sit amet dictum sit amet justo donec. Dui sapien eget mi proin. Consequat semper viverra nam libero.</p>
 					</div>
 				</div>
 			</div>
 		</section>
-		<section class="section section-stats">
-			<div class="container">
-				<div class="stats-block">
-					<div class="stat">
-						<div class="stat-count">4</div>
-						<div class="stat-text">клиники</div>
-					</div>
-					<div class="stat">
-						<div class="stat-count">25</div>
-						<div class="stat-text">лет опыта</div>
-					</div>
-					<div class="stat">
-						<div class="stat-count">90</div>
-						<div class="stat-text">специалистов</div>
-					</div>
-					<div class="stat">
-						<div class="stat-count">82 700+</div>
-						<div class="stat-text">проведенных операций</div>
-					</div>
-				</div>
-			</div>
-		</section>
-		<section class="section section-services section-big-padding">
-			<div class="container">
-				<h2 class="page-title h2">Услуги</h2>
-				<!-- для 2 карточек в ряд класс two-columns -->
-				<div class="cards-block two-columns">
-					<a href="" class="card">
-						<div class="card-name">Полная диагностика зрения</div>
-						<div class="card-price">от 10 000 руб.</div>
-						<div class="card-text">Полная диагностика зрения является важным этапом в выявления глазных патологий и включает в себя весь комплекс необходимых исследований органа зрения.</div>
-						<!-- если большая кнопка с текстом - класс btn и текст кнопки -->
-						<div class="btn">Подробнее</div>
-					</a>
-					<a href="" class="card">
-						<div class="card-name">Проверка зрения у ребенка</div>
-						<div class="card-price">от 10 000 руб.</div>
-						<div class="card-text">Глазная клиника «ЛЕНАР» предоставляет услуги по консервативному лечению детей с патологией органа зрения.</div>
-						<!-- если кнопка со стрелочкой и без текста - класс card-btn-mini и текст не вписывать -->
-						<div class="card-btn-mini"></div>
-					</a>
-					<a href="" class="card">
-						<div class="card-name">Блефаропластика и пластическая офтальмохирургия</div>
-						<div class="card-price">от 10 000 руб.</div>
-						<div class="card-text">Операции по возвращению молодости глаз. Проводится для коррекции избытка кожи и уменьшения грыж на нижних веках.</div>
-						<div class="card-btn-mini"></div>
-					</a>
-					<a href="" class="card">
-						<div class="card-name">Лазерная коррекция зрения</div>
-						<div class="card-price">от 10 000 руб.</div>
-						<div class="card-text">Современные методы коррекции зрения позволяют исправить практически все виды и степени нарушения рефракции зрения.</div>
-						<div class="card-btn-mini"></div>
-					</a>
-					<a href="" class="card">
-						<div class="card-name">Полная диагностика зрения</div>
-						<div class="card-price">от 10 000 руб.</div>
-						<div class="card-text">Полная диагностика зрения является важным этапом в выявления глазных патологий и включает в себя весь комплекс необходимых исследований органа зрения.</div>
-						<div class="card-btn-mini"></div>
-					</a>
-					<a href="" class="card">
-						<div class="card-name">Полная диагностика зрения</div>
-						<div class="card-price">от 10 000 руб.</div>
-						<div class="card-text">Полная диагностика зрения является важным этапом в выявления глазных патологий и включает в себя весь комплекс необходимых исследований органа зрения.</div>
-						<div class="card-btn-mini"></div>
-					</a>
-					<a href="" class="more-btn">Еще услуги</a>
-				</div>
-			</div>
-		</section>
 		<section class="section section-events section-background section-big-padding">
 			<div class="container">
-				<h2 class="page-title h2">События</h2>
+				<h2 class="page-title h2">Акции</h2>
 				<!-- для 3 карточек в ряд класс three-columns -->
 				<div class="cards-block events-block three-columns">
 					<!-- если в карточке есть фоновая картинка, то добавить класс card-bg и внутри карточки добавить картинку -->
@@ -209,13 +299,13 @@
 					</a>
 					<!-- если карточка должна быть белой, а фон блока серый, то добавить класс card-white -->
 					<!-- если карточка должна быть выделена рамкой, то добавить класс card-focus -->
-					<a href="" class="card card-white card-focus">
+					<a href="" class="card card-white">
 						<div class="card-label">Акции</div>
 						<div class="card-name">-10% на диагностику зрения в «СберЗдоровье»</div>
 						<div class="card-text">Клиника Ленар снова с отличными новостями! Теперь можно записаться на приём к врачу-офтальмологу через сервис «СберЗдоровье», да еще и со скидкой 10%.</div>
 						<div class="card-btn-mini"></div>
 					</a>
-					<a href="" class="card card-white card-focus">
+					<a href="" class="card card-white">
 						<div class="card-label">Акции</div>
 						<div class="card-name">Бесплатный подбор очков и линз в Пятигорске</div>
 						<div class="card-text">С 24 апреля по 24 мая 2023 года при проведении полной диагностики зрения в клинике Ленар в Пятигорске вы получаете в подарок бесплатный подбор очков и контактных линз.</div>
@@ -232,21 +322,6 @@
 						<div class="card-name">Новая клиника открыла свои двери в Нальчике</div>
 						<div class="card-text">Ура! Глазная клиника Ленар в Нальчике принимает пациентов в новом современном здании по адресу: ул. Мальбахова, 21А.</div>
 						<div class="card-btn-mini"></div>
-					</a>
-					<a href="" class="card card-white">
-						<div class="card-label">Новости</div>
-						<div class="card-name">Изменение графика работы</div>
-						<div class="card-text">
-							Обратите внимание на изменение графика работы в праздничные дни:​ 13 июня — рабочий день. <br><br>
-							Подробная информация и предварительная запись на прием по телефону 8-800-500-70-27.
-						</div>
-						<div class="card-btn-mini"></div>
-					</a>
-					<a href="" class="card card-bg">
-						<img src="img/news-img2.jpg" class="card-bg-img" alt="Новость">
-						<div class="card-btn-mini"></div>
-						<div class="card-label">СОБЫТИЯ</div>
-						<div class="card-name">Касанаве Даниэль: открыта запись на приём в марте 2023</div>
 					</a>
 				</div>
 			</div>
@@ -362,7 +437,6 @@
 </div>
 
 <script src="libs/blind/uhpv-full.min.js"></script>
-<script src="libs/fancybox/jquery.fancybox.min.js"></script>
 <script src="js/scripts.js"></script>
 
 </body>

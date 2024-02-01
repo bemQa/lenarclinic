@@ -55,4 +55,27 @@ $(document).ready(function() {
     }
     openAccordion();
 
+    var clinic_photos_slider = $('.clinic-photos');
+    if(clinic_photos_slider.length){
+        clinic_photos_slider.owlCarousel({
+            center: false,
+            items: 1,
+            loop: false,
+            nav: true,
+            dots: true,
+            margin: 10,
+            mouseDrag: true,
+            touchDrag: true,
+            navSpeed: 1300,
+            responsive: {
+                0: {
+                    nav: false
+                },
+                481: {
+                    nav: true
+                }
+            }
+        });
+    }
+
 });

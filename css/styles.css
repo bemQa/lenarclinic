@@ -4030,6 +4030,11 @@ a.review:hover {
         margin: 10rem 0;
     }
 
+    .video::before {
+        width: 30rem;
+        height: 30rem;
+    }
+
     .sign {
         margin-top: 6rem;
         font-size: 14rem;

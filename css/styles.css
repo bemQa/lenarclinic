@@ -891,21 +891,31 @@ body {
     font-weight: 800;
 }
 
+h1,
 .h1 {
     font-weight: 600;
     font-size: 72rem;
     line-height: normal;
 }
 
+h2,
 .h2 {
     font-weight: 600;
     font-size: 64rem;
     line-height: normal;
 }
 
+h3,
 .h3 {
     font-weight: 600;
     font-size: 48rem;
+    line-height: normal;
+}
+
+h4,
+.h4 {
+    font-weight: 600;
+    font-size: 36rem;
     line-height: normal;
 }
 
@@ -1137,7 +1147,7 @@ body {
 }
 
 .stat {
-    width: fit-content;
+    width: max-content;
 }
 
 .stat-count {
@@ -1568,7 +1578,7 @@ a.card:hover {
     align-items: center;
     width: fit-content;
     min-height: 66rem;
-    padding-right: 30rem;
+    padding-right: 48rem;
     font-weight: 600;
     font-size: 48rem;
     line-height: normal;
@@ -2868,6 +2878,71 @@ a.review:hover {
     text-align: center;
 }
 
+.text-page-content h2 {
+    font-size: 48rem;
+}
+
+.text-page-content h3 {
+    font-size: 36rem;
+}
+
+.text-page-content h4 {
+    font-size: 24rem;
+}
+
+.text-page-content p {
+    margin: 20rem 0;
+}
+
+.text-page-content a[data-fancybox] {
+    display: block;
+    line-height: 0;
+}
+
+.text-page-content {
+    max-width: 820rem;
+    width: 100%;
+    font-size: 20rem;
+    line-height: 150%;
+}
+
+.video {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    line-height: 0;
+}
+
+.video::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    width: 50rem;
+    height: 50rem;
+    background: url(../img/icons/play.svg) center/contain no-repeat;
+    filter: drop-shadow(0rem 0rem 100rem rgba(0, 0, 0, 0.50));
+    transition: all .3s ease;
+}
+
+.video:hover::before {
+    transform: scale(.94);
+}
+
+.sign {
+    display: inline-block;
+    width: 100%;
+    margin-top: 10rem;
+    font-size: 16rem;
+    text-align: center;
+    color: rgb(59 59 59 / 50%);
+}
+
 /*end main styles*/
 
 /*adaptive styles*/
@@ -2977,16 +3052,24 @@ a.review:hover {
         margin: 0 auto;
     }
 
+    h1,
     .h1 {
         font-size: 32rem;
     }
     
+    h2,
     .h2 {
         font-size: 32rem;
     }
 
+    h3,
     .h3 {
         font-size: 24rem;
+    }
+
+    h4,
+    .h4 {
+        font-size: 20rem;
     }
 
     .page-subtitle {
@@ -3123,7 +3206,7 @@ a.review:hover {
         gap: 30rem;
         max-width: 100%;
         margin: auto;
-        padding: 30rem;
+        padding: 30rem 35rem;
     }
 
     .stat-count {
@@ -3544,6 +3627,10 @@ a.review:hover {
         margin-bottom: 20rem;
     }
 
+    .doctor-img {
+        height: 270rem;
+    }
+
     .doctor-name {
         margin-bottom: 10rem;
         font-size: 20rem;
@@ -3922,6 +4009,31 @@ a.review:hover {
     .check-element-text {
         font-size: 16rem;
     }
+
+    .text-page-content {
+        font-size: 16rem;
+    }
+
+    .text-page-content h2 {
+        font-size: 24rem;
+    }
+
+    .text-page-content h3 {
+        font-size: 20rem;
+    }
+
+    .text-page-content h4 {
+        font-size: 16rem;
+    }
+
+    .text-page-content p {
+        margin: 10rem 0;
+    }
+
+    .sign {
+        margin-top: 6rem;
+        font-size: 14rem;
+    }
 }
 
 @media (max-width: 390px) {
@@ -3960,9 +4072,9 @@ a.review:hover {
         height: 190rem;
     }
 
-    .stats-block {
-        padding: 30rem 20rem;
-    }
+    /* .stats-block {
+        padding: 30rem 35rem;
+    } */
 
     .card-about .card-img {
         max-width: 350rem;

@@ -33,13 +33,13 @@ $(document).ready(function() {
 
     // аккордеон
     function openAccordion() {
-        var wrap = $('.accordion-wrap');
-        var accordion = wrap.find('.accordion-title');
+        let wrap = $('.accordion-wrap');
+        let accordion = wrap.find('.accordion-title');
 
         accordion.on('click', function () {
-          var $this = $(this);
-          var $parent = $(this).parent();
-          var content = $this.next();
+          let $this = $(this);
+          let $parent = $(this).parent();
+          let content = $this.next();
 
           if (content.is(':visible')) {
             $this.removeClass('active');
@@ -55,7 +55,7 @@ $(document).ready(function() {
     }
     openAccordion();
 
-    var clinic_photos_slider = $('.clinic-photos');
+    let clinic_photos_slider = $('.clinic-photos');
     if(clinic_photos_slider.length){
         clinic_photos_slider.owlCarousel({
             center: false,
@@ -76,6 +76,48 @@ $(document).ready(function() {
                 }
             }
         });
+    }
+
+    // select2
+    if($('.select').length > 1) {
+        $('select').each(function() {
+            let $this = $(this).not('.select-search');
+            let parent = $(this).not('.select-search').parents('.select');
+            $this.select2({
+                minimumResultsForSearch: Infinity,
+                dropdownParent: parent
+            });
+        });
+        $('.select-search').each(function() {
+            let $this = $(this);
+            let parent = $(this).parents('.select');
+            $this.select2({
+                dropdownParent: parent
+            });
+        });
+    } else if($('.select').length == 1) {
+        $('select').select2({
+            minimumResultsForSearch: Infinity,
+            dropdownParent: $('.select')
+        });
+        $('.select-search').select2({
+            dropdownParent: $('.select')
+        });
+    }
+
+    // history-element scroll
+    if($('.history-element, .list-item').length) {
+        $(window).on('scroll load', function () {
+            let top = $(window).scrollTop();
+            $('.history-element, .list-item').each(function() {
+                let destination = $(this).offset().top-300;
+                if(top >= destination) {
+                    $(this).addClass('scrolled');
+                } else {
+                    $(this).removeClass('scrolled');
+                }
+            });
+        }).trigger('scroll');
     }
 
 });

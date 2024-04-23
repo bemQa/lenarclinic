@@ -194,7 +194,22 @@
 				<!-- для 3 карточек в ряд класс three-columns -->
 				<div class="cards-block events-block three-columns">
 					<!-- если в карточке есть фоновая картинка, то добавить класс card-bg и внутри карточки добавить картинку -->
-					<a href="" class="card card-bg">
+					<!-- если фоновой картинки нет, но хочется карточку оставить широкой, то добавить класс card-nobg -->
+					<a href="" class="card card-white card-bg card-nobg">
+						<div class="card-btn-mini"><span>Подробнее</span></div>
+						<div class="card-label">СОБЫТИЯ</div>
+						<div class="card-name">Проводим Школу пациентов в учебных заведениях Нальчика</div>
+					</a>
+					<!-- если карточка должна быть белой, а фон блока серый, то добавить класс card-white -->
+					<!-- если карточка должна быть выделена рамкой, то добавить класс card-focus -->
+					<a href="" class="card card-white card-focus">
+						<div class="card-label">Акции</div>
+						<div class="card-name">-10% на диагностику зрения в «СберЗдоровье»</div>
+						<div class="card-text">Клиника Ленар снова с отличными новостями! Теперь можно записаться на приём к врачу-офтальмологу через сервис «СберЗдоровье», да еще и со скидкой 10%.</div>
+						<div class="card-btn-mini"><span>Подробнее</span></div>
+					</a>
+					<!-- если в карточке есть фоновая картинка, то добавить класс card-bg и внутри карточки добавить картинку -->
+					<a href="" class="card card-white card-bg">
 						<img src="img/news-img1.jpg" class="card-bg-img" alt="Новость">
 						<div class="card-btn-mini"><span>Подробнее</span></div>
 						<div class="card-label">СОБЫТИЯ</div>

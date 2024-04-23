@@ -1417,7 +1417,7 @@ a.card:hover {
     grid-column-end: span 4;
 }
 
-.card-bg::before {
+.card-bg:not(.card-nobg)::before {
     content: '';
     position: absolute;
     top: 0;
@@ -1451,12 +1451,12 @@ a.card:hover {
     z-index: 1;
 }
 
-.card-bg .card-label {
+.card-bg:not(.card-nobg) .card-label {
     color: #B2CCFF;
 }
 
-.card-bg .card-name,
-.card-bg .card-text {
+.card-bg:not(.card-nobg) .card-name,
+.card-bg:not(.card-nobg) .card-text {
     color: #fff;
 }
 

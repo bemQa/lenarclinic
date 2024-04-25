@@ -325,10 +325,6 @@ body .adaptive-visible {
     body .adaptive-visible {
         display: block;
     }
-
-    body .desktop-adaptive-visible {
-        display: none;
-    }
 }
 
 @media (max-width: 480px) {
@@ -336,6 +332,7 @@ body .adaptive-visible {
         display: block;
     }
 
+    body .desktop-adaptive-visible,
     body .desktop-mobile-visible {
         display: none;
     }
@@ -3310,6 +3307,7 @@ textarea.input-text {
 }
 
 .select2 {
+    width: 100% !important;
     z-index: 2;
 }
 
@@ -3489,6 +3487,45 @@ textarea.input-text {
 
 .section-not-padding-bottom {
     padding-bottom: 0;
+}
+
+.modal {
+    display: none;
+}
+
+.modal.fancybox-content {
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    background: transparent;
+    border-radius: 40rem;
+}
+
+.modal_content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 810rem;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.modal .fancybox-close-small {
+    top: 10rem;
+    right: 10rem;
+    width: 44rem;
+    height: 44rem;
+    padding: 4rem;
+}
+
+.modal_content + .fancybox-close-small {
+    display: none;
+}
+
+.modal .form-success {
+    position: relative;
+    padding: 120rem 40rem;
 }
 
 /*end main styles*/
@@ -4678,6 +4715,21 @@ textarea.input-text {
 
     .form-success-text {
         font-size: 16rem;
+    }
+
+    .modal .fancybox-close-small {
+        top: 5rem;
+        right: 5rem;
+        width: 34rem;
+        height: 34rem;
+    }
+
+    .modal .form {
+        padding: 40rem 20rem;
+    }
+
+    .modal .form-success {
+        padding: 80rem 20rem;
     }
 }
 

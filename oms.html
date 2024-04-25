@@ -6,6 +6,8 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 
     <link rel="stylesheet" href="libs/blind/special.min.css">
+	<link rel="stylesheet" href="libs/fancybox/jquery.fancybox.min.css">
+	<link rel="stylesheet" href="libs/select2/select2.min.css"/>
     <link rel="stylesheet" href="fonts/stylesheet.css"/>
 	<link rel="stylesheet" href="css/styles.css"/>
 
@@ -172,7 +174,7 @@
 							<p>Если вы не знаете, что именно с вашим зрением, никогда ранее не были в нашей клинике и вам нужна помощь с выбором обследования, операторы клиники ЛЕНАР помогут вам.</p>
 							<p>Нажмите кнопку «Связаться» и заполните телефон, чтобы наши операторы смогли с вами связаться и помочь во всем разобраться.</p>
 						</div>
-						<a href="" class="btn white btn-nav">
+						<a href="#form-modal" class="btn white btn-nav">
 							<span class="desktop-adaptive-visible">Оставить заявку на обратный звонок</span>
 							<span class="mobile-visible">Заявка на обратный звонок</span>
 						</a>
@@ -180,6 +182,59 @@
 				</div>
 			</div>
 		</section>
+		<div class="modal" id="form-modal">
+            <div class="modal_content">
+				<button type="button" data-fancybox-close="" class="fancybox-button fancybox-close-small" title="Close">
+					<svg xmlns="http://www.w3.org/2000/svg" version="1" viewBox="0 0 24 24"><path d="M13 12l5-5-1-1-5 5-5-5-1 1 5 5-5 5 1 1 5-5 5 5 1-1z"></path></svg>
+				</button>
+				<form class="form">
+					<div class="form-text">Пожалуйста, заполните электронную форму записи — администратор свяжется с вами и уточнит детали приема.</div>
+					<!-- при ошибке добавить класс has-error обертке инпута -->
+					<div class="ip-cell w100 has-error">
+						<input type="text" class="input-text" name="fio" placeholder="ФИО" required="">
+						<div class="help-block">Укажите ФИО</div>
+					</div>
+					<!-- при корректном вводе можно добавить класс success обертке инпута, либо поле само завалидируется средствами css -->
+					<div class="ip-cell">
+						<input type="text" class="input-text" name="phone" placeholder="Телефон" required="" value="88009998877">
+						<div class="help-block">Укажите Телефон</div>
+					</div>
+					<!-- при корректном вводе можно добавить класс success обертке селекта -->
+					<div class="ip-cell">
+						<div class="select">
+							<select name="city" data-placeholder="Город">
+								<option value=""></option>
+								<option value="1" selected>Нальчик</option>
+								<option value="2">Пятигорск</option>
+								<option value="3">Назрань</option>
+								<option value="4">Владикавказ</option>
+							</select>
+						</div>
+					</div>
+					<div class="ip-cell ip-cell-checkbox">
+						<input type="checkbox" id="reg-ch" class="ch" name="reg-ch" required="">
+						<label for="reg-ch">Я принимаю условия <a href="">политики конфиденциальности</a> и даю согласие на обработку моих персональных данных</label>
+						<div class="help-block">Примите условия, чтобы продолжить</div>
+					</div>
+					<button class="btn">Отправить заявку</button>
+					<div class="form-success" style="display: none;">
+						<div class="form-success-title">Ваша заявка отправлена!</div>
+						<div class="form-success-text">В ближайшее время с вами свяжется администратор</div>
+					</div>
+				</form>
+			</div>
+        </div>
+		<div class="modal" id="form-modal-success">
+            <div class="modal_content">
+				<button type="button" data-fancybox-close="" class="fancybox-button fancybox-close-small" title="Close">
+					<svg xmlns="http://www.w3.org/2000/svg" version="1" viewBox="0 0 24 24"><path d="M13 12l5-5-1-1-5 5-5-5-1 1 5 5-5 5 1 1 5-5 5 5 1-1z"></path></svg>
+				</button>
+				<div class="form-success">
+					<div class="form-success-title">Ваша заявка отправлена!</div>
+					<div class="form-success-text">В ближайшее время с вами свяжется администратор</div>
+				</div>
+			</div>
+        </div>
 		<section class="section section-catalog-documents">
 			<div class="container">
 				<div class="catalog-list accordion-wrap">
@@ -324,7 +379,20 @@
 </div>
 
 <script src="libs/blind/uhpv-full.min.js"></script>
+<script src="libs/fancybox/jquery.fancybox.min.js"></script>
+<script src="libs/select2/select2.min.js"></script>
 <script src="js/scripts.js"></script>
+
+<script>
+    $('body').on('click','.form-open, a[href="#form-modal"], button[href="#form-modal"]', function(e){
+        e.preventDefault();
+        $.fancybox.open({
+            src: '#form-modal',
+            type: 'inline',
+			touch: false
+        });
+    });
+</script>
 
 </body>
 </html>

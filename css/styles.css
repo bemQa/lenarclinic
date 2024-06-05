@@ -3539,6 +3539,10 @@ textarea.input-text {
     padding: 120rem 40rem;
 }
 
+.animateMe {
+    opacity: 0;
+}
+
 /*end main styles*/
 
 /*adaptive styles*/

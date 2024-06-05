@@ -3029,6 +3029,11 @@ a.clinic-name:hover {
     margin: 20rem 0;
 }
 
+.text-page-content a {
+    color: #1066F6;
+    text-decoration: underline;
+}
+
 .text-page-content a[data-fancybox] {
     display: block;
     line-height: 0;

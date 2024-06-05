@@ -1869,6 +1869,7 @@ a.card:hover {
 
 .document {
     position: relative;
+    display: inline-block;
     width: 620rem;
     margin-bottom: 20rem;
     padding-left: 48rem;
@@ -3032,6 +3033,11 @@ a.clinic-name:hover {
 .text-page-content a {
     color: #1066F6;
     text-decoration: underline;
+}
+
+.text-page-content a:hover {
+    color: #252525;
+    text-decoration: none;
 }
 
 .text-page-content a[data-fancybox] {

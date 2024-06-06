@@ -2916,10 +2916,6 @@ a.clinic-name:hover {
     transition: all .3s ease;
 }
 
-.list-item.active::before {
-    background: #1066F6;
-}
-
 .list-item:not(:last-child)::after {
     content: '';
     position: absolute;
@@ -2930,10 +2926,12 @@ a.clinic-name:hover {
     background: #EBEBEB;
 }
 
+.list-item.active::before,
 .list-item.scrolled::before {
     border-color: #1066F6;
 }
 
+.list-item.active:not(:last-child)::after,
 .list-item.scrolled:not(:last-child)::after {
     background-color: #1066F6;
 }

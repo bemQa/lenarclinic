@@ -37,19 +37,28 @@ $(document).ready(function() {
         let accordion = wrap.find('.accordion-title');
 
         accordion.on('click', function () {
-          let $this = $(this);
-          let $parent = $(this).parent();
-          let content = $this.next();
+            let $this = $(this);
+            let $parent = $(this).parent();
+            let wrapper = $(this).parents('.accordion-wrap');
+            let content = $this.next();
 
-          if (content.is(':visible')) {
-            $this.removeClass('active');
-            $parent.removeClass('active');
-            content.slideUp('fast');
-          } else {
-            $this.addClass('active');
-            $parent.addClass('active');
-            content.slideDown('fast');
-          }
+            if (content.is(':visible')) {
+                if(wrapper.hasClass('single-accordion')) {
+                    wrapper.children().find('.accordion-title').removeClass('active');
+                    wrapper.children().find('.accordion-title').next().slideUp('fast');
+                }
+                $this.removeClass('active');
+                $parent.removeClass('active');
+                content.slideUp('fast');
+            } else {
+                if(wrapper.hasClass('single-accordion')) {
+                    wrapper.children().find('.accordion-title').removeClass('active');
+                    wrapper.children().find('.accordion-title').next().slideUp('fast');
+                }
+                $this.addClass('active');
+                $parent.addClass('active');
+                content.slideDown('fast');
+            }
 
         });
     }
@@ -106,10 +115,10 @@ $(document).ready(function() {
     }
 
     // history-element scroll
-    if($('.history-element, .list-item').length) {
+    if($('.history-element').length) {
         $(window).on('scroll load', function () {
             let top = $(window).scrollTop();
-            $('.history-element, .list-item').each(function() {
+            $('.history-element').each(function() {
                 let destination = $(this).offset().top-300;
                 if(top >= destination) {
                     $(this).addClass('scrolled');
@@ -118,6 +127,20 @@ $(document).ready(function() {
                 }
             });
         }).trigger('scroll');
+    }
+
+    if($('.list-item').length) {
+        $('.list-item').click(function() {
+            if($(this).hasClass('active')) {
+                $('.list-item').removeClass('active');
+                $(this).addClass('active');
+                $(this).prevAll().addClass('active');
+            } else {
+                $('.list-item').removeClass('active');
+                $(this).removeClass('active');
+                $(this).prevAll().removeClass('active');
+            }
+        });
     }
 
     scrollWaypointInit($('.animateMe'));

@@ -122,6 +122,24 @@ $(document).ready(function() {
 
     scrollWaypointInit($('.animateMe'));
 
+    function countMe() {
+        $('.count_me').spincrement({
+            thousandSeparator: '',
+            duration: 2200
+        });
+    };
+    
+    if ( $('.stats-block').length ) {
+        $(window).scroll(function(){
+            let oftop = $(this).scrollTop();
+            let counters = $('.stats-block').offset().top;
+            let percent = $(window).height() * 0.8;
+            if ( oftop > counters-percent ) {
+                countMe();
+            }
+        });
+    }
+
 });
 
 function scrollWaypointInit(items, trigger) {

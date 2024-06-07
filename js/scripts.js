@@ -187,3 +187,25 @@ function scrollWaypointInit(items, trigger) {
         });
     });
 }
+
+( function() {
+
+    var youtube = document.querySelectorAll( ".youtube" );
+    
+    for (var i = 0; i < youtube.length; i++) {
+    
+        youtube[i].addEventListener( "click", function() {
+
+            var iframe = document.createElement( "iframe" );
+
+                iframe.setAttribute( "frameborder", "0" );
+                iframe.setAttribute( "allow", "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" );
+                iframe.setAttribute( "allowfullscreen", "" );
+                iframe.setAttribute( "src", this.dataset.link +"?rel=0&showinfo=0&enablejsapi=1" );
+
+                this.innerHTML = "";
+                this.appendChild( iframe );
+        } );    
+    };
+    
+} )();

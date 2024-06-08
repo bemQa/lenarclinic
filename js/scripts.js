@@ -163,6 +163,11 @@ $(document).ready(function() {
         });
     }
 
+    $('.youtube-iframe').click(function(){
+        $('.youtube-iframe').removeClass('active').addClass('inactive');
+        $(this).removeClass('inactive').addClass('active');
+    });
+
 });
 
 function scrollWaypointInit(items, trigger) {
@@ -201,7 +206,7 @@ function scrollWaypointInit(items, trigger) {
                 iframe.setAttribute( "frameborder", "0" );
                 iframe.setAttribute( "allow", "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" );
                 iframe.setAttribute( "allowfullscreen", "" );
-                iframe.setAttribute( "src", this.dataset.link +"?rel=0&showinfo=0&enablejsapi=1" );
+                iframe.setAttribute( "src", this.dataset.link + "?autoplay=1&controls=0");
 
                 this.innerHTML = "";
                 this.appendChild( iframe );

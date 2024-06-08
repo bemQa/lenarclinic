@@ -1100,6 +1100,7 @@ h4,
     border-radius: 40rem;
     box-shadow: 0rem 0rem 50rem 0rem rgba(0, 0, 0, 0.05);
     overflow: hidden;
+    transition: all .2s linear;
 }
 
 .review-mainpage:nth-child(2) {
@@ -1128,6 +1129,18 @@ h4,
     width: 100%;
     height: 100%;
     object-fit: cover;
+    cursor: pointer;
+}
+
+.review-mainpage iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    width: 100%;
+    height: 100%;
 }
 
 .review-mainpage::after {
@@ -1139,6 +1152,35 @@ h4,
     height: 26rem;
     background: url(../img/icons/play.svg) center/contain no-repeat;
     filter: drop-shadow(0rem 0rem 50rem rgba(0, 0, 0, 0.50));
+    cursor: pointer;
+}
+
+.youtube-iframe.active::after {
+    display: none;
+}
+
+.youtube-iframe.active,
+.youtube-iframe:hover {
+    scale: 1.1;
+    opacity: 1 !important;
+}
+
+.youtube-iframe.inactive {
+    scale: 0.9;
+    opacity: 0.7 !important;
+}
+
+.youtube-play {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    cursor: pointer;
 }
 
 .lenar-text-block {

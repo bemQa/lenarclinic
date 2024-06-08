@@ -4468,9 +4468,9 @@ textarea.input-text {
     }
 
     .advantage-bg-icon {
-        right: 20rem;
-        width: 110rem;
-        height: 110rem;
+        /* right: 20rem; */
+        width: 90rem;
+        height: 90rem;
     }
 
     .advantage-title {

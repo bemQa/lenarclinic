@@ -3583,6 +3583,11 @@ textarea.input-text {
     opacity: 0;
 }
 
+.iframe-video-vertical {
+    width: 47.3684210526vh;
+    height: 100vh;
+}
+
 /*end main styles*/
 
 /*adaptive styles*/

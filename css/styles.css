@@ -1101,18 +1101,16 @@ h4,
     border-radius: 40rem;
     box-shadow: 0rem 0rem 50rem 0rem rgba(0, 0, 0, 0.05);
     overflow: hidden;
-    transition: all .2s linear;
+    transition: all .35s linear;
 }
 
-.review-mainpage:nth-child(2),
-.review-mainpage.second {
+.review-mainpage:nth-child(2) {
     width: 190rem;
     height: 340rem;
     border-radius: 32rem;
 }
 
-.review-mainpage:nth-child(3),
-.review-mainpage.third {
+.review-mainpage:nth-child(3) {
     width: 138rem;
     height: 240rem;
     border-radius: 24rem;
@@ -1122,6 +1120,18 @@ h4,
     width: 248rem;
     height: 440rem;
     border-radius: 40rem;
+}
+
+.review-mainpage.second {
+    width: 190rem;
+    height: 340rem;
+    border-radius: 32rem;
+}
+
+.review-mainpage.third {
+    width: 138rem;
+    height: 240rem;
+    border-radius: 24rem;
 }
 
 .review-mainpage:hover {

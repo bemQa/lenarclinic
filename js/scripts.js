@@ -168,20 +168,22 @@ $(document).ready(function() {
         $(this).removeClass('inactive').addClass('active');
     });
 
-    $('.review-mainpage').mouseover(function(e) {
-        $(this).addClass('first')
-        if($(this).index() == 2) {
-            $('.review-mainpage:eq(0)').addClass('third');
-        } else if($(this).index() == 1) {
-            $('.review-mainpage:eq(0), .review-mainpage:eq(2)').addClass('third');
-        } else if($(this).index() == 0) {
-            $(this).css({'scale':'1.1'});
-        }
-    });
-
-    $('.review-mainpage').mouseout(function(e) {
-        $('.review-mainpage').removeClass('first second third').css({'scale':''});
-    });
+    if($(window).innerWidth() > 480) {
+        $('.review-mainpage').mouseover(function(e) {
+            $(this).addClass('first')
+            if($(this).index() == 2) {
+                $('.review-mainpage:eq(0)').addClass('third');
+            } else if($(this).index() == 1) {
+                $('.review-mainpage:eq(0), .review-mainpage:eq(2)').addClass('third');
+            } else if($(this).index() == 0) {
+                $(this).css({'scale':'1.1'});
+            }
+        });
+    
+        $('.review-mainpage').mouseout(function(e) {
+            $('.review-mainpage').removeClass('first second third').css({'scale':''});
+        });
+    }
 
 });
 

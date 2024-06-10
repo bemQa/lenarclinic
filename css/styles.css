@@ -3611,6 +3611,20 @@ textarea.input-text {
     height: 100vh;
 }
 
+.text-page-content table {
+    width: 100%;
+    border-spacing: 0;
+}
+
+.text-page-content table.medoborud td {
+    padding: 10rem;
+    border-bottom: 1rem solid #000;
+}
+
+.text-page-content table.medoborud td:first-child {
+    width: 200rem;
+}
+
 /*end main styles*/
 
 /*adaptive styles*/
@@ -3812,6 +3826,7 @@ textarea.input-text {
 
     .reviews-mainpage {
         width: 100%;
+        height: auto;
         margin-top: 60rem;
     }
 
@@ -4813,6 +4828,15 @@ textarea.input-text {
 
     .modal .form-success {
         padding: 80rem 20rem;
+    }
+
+    .text-page-content table.medoborud td {
+        padding: 0;
+    }
+
+    .text-page-content table.medoborud td:first-child {
+        max-width: 150rem;
+        width: auto;
     }
 }
 

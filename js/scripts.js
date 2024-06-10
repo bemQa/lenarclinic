@@ -168,6 +168,21 @@ $(document).ready(function() {
         $(this).removeClass('inactive').addClass('active');
     });
 
+    $('.review-mainpage').mouseover(function(e) {
+        if($(this).index() == 2) {
+            $(this).addClass('first')
+            $('.review-mainpage').eq(0).addClass('third')
+        } else if($(this).index() == 1) {
+            $(this).css({'scale': '1.05'});
+        } else if($(this).index() == 0) {
+            
+        }
+    });
+
+    $('.review-mainpage').mouseout(function(e) {
+        $('.review-mainpage').removeClass('first second third');
+    });
+
 });
 
 function scrollWaypointInit(items, trigger) {

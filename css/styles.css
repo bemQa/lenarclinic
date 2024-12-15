@@ -2110,7 +2110,8 @@ a.doctor-element:hover {
     align-items: center;
     justify-content: center;
     width: 270rem;
-    height: 270rem;
+    /* height: 270rem; */
+    height: 405rem;
     margin-right: 40rem;
     border-radius: 24rem;
     overflow: hidden;
@@ -2241,7 +2242,8 @@ a.doctor-element:hover {
     align-items: center;
     justify-content: center;
     width: 315rem;
-    height: 315rem;
+    /* height: 315rem; */
+    height: 472rem;
     margin: 0 auto 30rem;
     border-radius: 24rem;
     overflow: hidden;
@@ -3625,6 +3627,10 @@ textarea.input-text {
     width: 200rem;
 }
 
+.text-remark {
+    margin: 20rem 0;
+}
+
 /*end main styles*/
 
 /*adaptive styles*/
@@ -4306,7 +4312,8 @@ textarea.input-text {
     }
 
     .doctor-img {
-        height: 270rem;
+        /* height: 270rem; */
+        height: 405rem;
     }
 
     .doctor-name {

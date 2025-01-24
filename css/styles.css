@@ -4266,6 +4266,7 @@ textarea.input-text {
 
     .doctor-element-img {
         width: 100%;
+        height: 600rem;
         margin: 0 0 20rem;
         border-radius: 20rem;
     }
@@ -4897,6 +4898,10 @@ textarea.input-text {
     .address-content-photo {
         max-width: 100rem;
         height: 66rem;
+    }
+
+    .doctor-element-img {
+        height: 405rem;
     }
 }
 /*end mobile styles*/

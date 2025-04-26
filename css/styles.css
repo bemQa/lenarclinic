@@ -391,17 +391,39 @@ body {
 
 .logo {
     position: relative;
-    display: block;
-    max-width: 82rem;
+    display: flex;
+    align-items: center;
+    gap: 0 10rem;
+    max-width: 184rem;
     width: 100%;
     line-height: 0;
     z-index: 11;
+}
+
+.logo img {
+    max-width: 82rem;
+    width: 100%;
+}
+
+.logo span {
+    font-weight: 700;
+    font-size: 26rem;
+    line-height: 1.5;
+    color: #1066F6;
 }
 
 .blind-link {
     width: 147rem;
     margin-left: 40rem;
     line-height: 0;
+    cursor: pointer;
+}
+
+.blind-link.mobile-visible {
+    display: none;
+    opacity: 0;
+    width: 0;
+    pointer-events: none;
 }
 
 .header-buttons {
@@ -708,6 +730,7 @@ body {
 }
 
 .menu-links.desktop-mobile-visible {
+    position: relative;
     margin-left: auto;
 }
 
@@ -1593,7 +1616,7 @@ a.card:hover {
 }
 
 .section-page-title {
-    padding-top: 160rem;
+    padding-top: 80rem;
     padding-bottom: 45rem;
 }
 
@@ -3658,13 +3681,34 @@ textarea.input-text {
     }
 
     .logo {
+        max-width: 136rem;
+    }
+
+    .logo img {
         max-width: 56rem;
     }
 
+    .logo span {
+        font-size: 20rem;
+    }
+
     .blind-link {
-        width: 125rem;
-        margin-left: 20rem;
-        margin-right: auto;
+        /* width: 125rem; */
+        margin: 0;
+    }
+
+    .header-container .blind-link {
+        display: none !important;
+        opacity: 0;
+        width: 0;
+        pointer-events: none;
+    }
+
+    .blind-link.mobile-visible {
+        display: block;
+        opacity: 1;
+        width: auto;
+        pointer-events: auto;
     }
 
     .header-buttons {
@@ -4845,6 +4889,18 @@ textarea.input-text {
     .text-page-content table.medoborud td:first-child {
         max-width: 150rem;
         width: auto;
+    }
+
+    .dop-menu-phone.mobile-visible {
+        width: 28rem;
+        height: 28rem;
+        margin-left: auto;
+        padding: 0;
+        font-size: 0;
+    }
+
+    .dop-menu-phone.mobile-visible::before {
+        opacity: 1;
     }
 }
 

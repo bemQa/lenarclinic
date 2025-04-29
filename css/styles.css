@@ -1917,6 +1917,10 @@ a.card:hover {
     overflow: hidden;
 }
 
+.page-navigations + .doctors-list {
+    margin-top: 45rem;
+}
+
 .page-navigation {
     position: relative;
     display: flex;
@@ -4443,6 +4447,10 @@ textarea.input-text {
 	.page-navigations::-webkit-scrollbar {
         width: 0;
         height: 0;
+    }
+
+    .page-navigations + .doctors-list {
+        margin-top: 30rem;
     }
 
     .addresses-wrapper {

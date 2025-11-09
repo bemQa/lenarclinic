@@ -468,6 +468,12 @@ body {
     transition: all .2s linear;
 }
 
+.btn-border {
+    padding-top: 18rem;
+    padding-bottom: 18rem;
+    border: 2rem solid #1066F6;
+}
+
 .btn.white {
     background: #fff !important;
     color: #1066F6 !important;
@@ -997,6 +1003,10 @@ h4,
 }
 
 .page-text + .page-text {
+    margin-top: 20rem;
+}
+
+.page-text + .btn {
     margin-top: 20rem;
 }
 
@@ -2366,6 +2376,11 @@ a.doctor-element:hover {
     -webkit-column-gap: 30rem;
 }
 
+.masonry-layout-4 {
+    column-count: 4;
+    -webkit-column-count: 4;
+}
+
 .masonry-layout__panel {
     break-inside: avoid;
     -webkit-column-break-inside: avoid;
@@ -2374,6 +2389,10 @@ a.doctor-element:hover {
 
 .reviews-list {
     margin-top: 60rem;
+}
+
+.reviews-list + .reviews-list {
+    margin-top: 10rem;
 }
 
 .review {
@@ -2386,11 +2405,29 @@ a.doctor-element:hover {
     box-shadow: 0rem 0rem 100rem 0rem rgba(0, 0, 0, 0.03);
 }
 
+.review-v2 {
+    padding: 20rem;
+    border-radius: 16rem;
+    background: #F0F5FF;
+    box-shadow: none;
+    transition: all .3s ease;
+}
+
+.review-v2[data-fancybox] {
+    cursor: pointer;
+}
+
+.review-video {
+    position: relative;
+    height: 510rem;
+}
+
 .review:last-child {
     margin-bottom: 0;
 }
 
-a.review:hover {
+a.review:hover,
+.review-v2[data-fancybox]:hover {
     background: #F0F5FF;
     box-shadow: 0rem 0rem 50rem 0rem rgba(0, 0, 0, 0.1);
 }
@@ -2404,15 +2441,52 @@ a.review:hover {
 }
 
 .review-name {
+    position: relative;
     margin-bottom: 10rem;
     font-weight: 600;
     font-size: 24rem;
     line-height: 150%;
+    z-index: 1;
+}
+
+.review-video .review-name {
+    margin-top: auto;
+    margin-bottom: 6rem;
+    color: #fff;
 }
 
 .review-text {
+    position: relative;
     font-size: 18rem;
     line-height: 150%;
+    z-index: 1;
+}
+
+.review-v2 .review-text {
+    display: -webkit-box;
+    -webkit-line-clamp: 13;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.review-video .review-text {
+    color: #fff;
+}
+
+.review-detail-link {
+    position: relative;
+    margin: 20rem auto 0;
+    font-weight: 600;
+    font-size: 18rem;
+    line-height: 1;
+    color: rgba(16, 102, 246, 0.5);
+    transition: all .3s ease;
+    z-index: 1;
+}
+
+.review:hover .review-detail-link {
+    color: rgba(16, 102, 246, 1);
 }
 
 .review-img {
@@ -2428,6 +2502,15 @@ a.review:hover {
     overflow: hidden;
 }
 
+.review-video .review-img {
+    position: absolute;
+    inset: 0;
+    max-width: 100%;
+    height: 100%;
+    margin: auto;
+    border-radius: 16rem;
+}
+
 .review-img img {
     position: absolute;
     top: 0;
@@ -2438,6 +2521,17 @@ a.review:hover {
     width: 100%;
     height: 100%;
     object-fit: cover;
+}
+
+.review-video .review-img::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 50.04%, rgba(2, 3, 5, 0.8) 100.09%);
+    z-index: 1;
 }
 
 .review-img::after {
@@ -3658,6 +3752,23 @@ textarea.input-text {
     margin: 20rem 0;
 }
 
+.section-reviews-page {
+    padding: 0 0 60rem;
+}
+
+.modal-title {
+    margin-bottom: 20rem;
+    font-weight: 600;
+    font-size: 36rem;
+    line-height: 150%;
+}
+
+.review-modal_content {
+    padding: 20rem;
+    background: #F0F5FF;
+    border-radius: 16rem;
+}
+
 /*end main styles*/
 
 /*adaptive styles*/
@@ -3727,6 +3838,12 @@ textarea.input-text {
     .btn {
         padding: 16rem 32rem;
         font-size: 16rem;
+    }
+
+    .btn-border {
+        padding-top: 15rem;
+        padding-bottom: 15rem;
+        border: 1rem solid #1066F6;
     }
 
     .btn-nav {
@@ -4425,7 +4542,8 @@ textarea.input-text {
         font-size: 20rem;
     }
 
-    .review-text {
+    .review-text,
+    .review-detail-link {
         font-size: 16rem;
     }
 

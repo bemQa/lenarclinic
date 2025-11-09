@@ -185,6 +185,14 @@ $(document).ready(function() {
         });
     }
 
+    // попап отзывов
+    $('body').on('click', '.review-open', function(e) {
+        let name = $(this).find('.review-name').html();
+        let text = $(this).find('.review-text').html();
+        $('#modal_review_name').html(name);
+        $('#modal_review_text').html(text);
+    });
+
 });
 
 function scrollWaypointInit(items, trigger) {

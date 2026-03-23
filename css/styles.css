@@ -3826,6 +3826,10 @@ textarea.input-text {
         pointer-events: auto;
     }
 
+    .blind-link.mobile-visible + .footer-menu {
+        margin-top: 10rem;
+    }
+
     .header-buttons {
         display: flex;
         flex-direction: column;

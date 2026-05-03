@@ -197,6 +197,8 @@ $(document).ready(function() {
     const imageContainer = document.getElementById('imageContainer');
     const closeBtn = document.getElementById('closeBtn');
     const imageLink = document.getElementById('imageLink');
+    // временно добавил, чтобы почистить старое состояние на клиентах
+    localStorage.removeItem('banner2Closed');
 
     // Функция разворачивания
     function expandBanner() {

@@ -217,7 +217,6 @@ $(document).ready(function() {
     } else {
         imageContainer.classList.remove('minimized');
     }
-    // Баннер всегда видим, display не трогаем
 
     // 2. Клик по крестику — сворачиваем
     closeBtn.onclick = function(e) {
@@ -227,7 +226,6 @@ $(document).ready(function() {
 
     // 3. Клик по контейнеру (кроме крестика) — разворачиваем, если свёрнут
     imageContainer.addEventListener('click', function(e) {
-        // Если кликнули именно по крестику — не разворачиваем
         if (e.target === closeBtn || closeBtn.contains(e.target)) {
             return;
         }
@@ -238,21 +236,14 @@ $(document).ready(function() {
 
     // 4. Клик по ссылке
     imageLink.addEventListener('click', function(e) {
-        // Если баннер свёрнут — разворачиваем и阻止 переход
         if (imageContainer.classList.contains('minimized')) {
             e.preventDefault();
             expandBanner();
             return;
         }
-        // Иначе (развёрнут) — просто открываем ссылку, не меняя состояние
-        // (e.preventDefault() не вызываем, либо вызываем и открываем вручную, но лучше без preventDefault)
-        // Чтобы ссылка открылась в новой вкладке, можно оставить стандартное поведение
-        // При необходимости можно добавить target="_blank" в теге <a>
-        // Поскольку в оригинале был window.open, можно оставить так:
         e.preventDefault();
         const url = imageLink.getAttribute('href');
         window.open(url, '_blank');
-        // Состояние баннера не меняется
     });
 });
 

@@ -94,74 +94,71 @@
 			<div class="container">
 				<div class="mainpage-wrapper">
 					<div class="mainpage-info">
-						<h1 class="page-title h1">Современная глазная клиника для взрослых и детей»</h1>
-						<div class="page-subtitle">Лечение глазных заболеваний и коррекции зрения в Нальчике, Пятигорске и Назрани</div>
-						<a href="" class="btn btn-nav">Бесплатная консультация</a>
+						<h1 class="page-title h1">Глазная клиника «ЛЕНАР»</h1>
+						<div class="page-subtitle">Помогаем нашим клиентам восстанавливать и сохранять здоровое зрение</div>
+						<a href="" class="btn white-blue btn-nav">Смотреть все отзывы</a>
 					</div>
-					<div class="mainpage-video">
-						<video src="video/kv.mp4" loop muted autoplay></video>
+					<div class="reviews-mainpage">
+						<!-- если при инициализации указать data-fancybox="название галереи" то все элементы будут объединены в одну галерею, если не указывать, то будут выводиться по отдельности -->
+						<!-- параметр data-ratio="0.5625" нужен для отображения вертикальных видео -->
+						<!-- переделал первый элемент на локальное видео -->
+						<a href="video/test.mp4" class="review-mainpage animateMe" data-animation="fadeInRight" data-fancybox="reviews-gallery" data-ratio="0.5625" data-src="video/test.mp4">
+							<img src="video/testvideo-preview.jpg" alt="">
+						</a>
+						<a href="https://www.youtube.com/embed/NpYkTMkphek" data-fancybox="reviews-gallery" data-ratio="0.5625" class="review-mainpage animateMe" data-animation="fadeInRight" data-animation-delay="0.2s">
+							<!-- а можно загрузить на сайт -->
+							<img src="img/reviewer1.png" alt="Человек с отзывом">
+						</a>
+						<a href="https://www.youtube.com/embed/RERCDv2zb6M" data-fancybox="reviews-gallery" data-ratio="0.5625" class="review-mainpage animateMe" data-animation="fadeInRight" data-animation-delay="0.4s">
+							<img src="img/reviewer2.png" alt="Человек с отзывом">
+						</a>
 					</div>
-					<div class="mainpage-stats-block">
-						<div class="stat">
-							<div class="stat-count"><span class="count_me" data-from="100000" data-to="102000">102 000</span>+</div>
-							<div class="stat-text">проведенных операций</div>
+					<!-- возможно(!) будущая версия отзывов без открытия их в модалке -->
+					<!-- <div class="reviews-mainpage reviews-mainpage-v2">
+						<div data-link="https://www.youtube.com/embed/cmEvxAG-DrU" class="review-mainpage youtube youtube-iframe animateMe" data-animation="fadeInRight">
+							<img src="https://img.youtube.com/vi/cmEvxAG-DrU/maxresdefault.jpg" alt="">
 						</div>
-						<div class="stat">
-							<div class="stat-count count_me" data-from="0" data-to="29">29+</div>
-							<div class="stat-text">лет опыта и развития</div>
+						<div data-link="https://www.youtube.com/embed/NpYkTMkphek" class="review-mainpage youtube youtube-iframe animateMe" data-animation="fadeInRight" data-animation-delay="0.2s">
+							<img src="img/reviewer1.png" alt="Человек с отзывом">
 						</div>
+						<div data-link="https://www.youtube.com/embed/RERCDv2zb6M" class="review-mainpage youtube youtube-iframe animateMe" data-animation="fadeInRight" data-animation-delay="0.4s">
+							<img src="img/reviewer2.png" alt="Человек с отзывом">
+						</div>
+					</div> -->
+				</div>
+			</div>
+		</section>
+		<section class="section section-lenar-text section-not-padding-top">
+			<div class="container">
+				<div class="lenar-text-block">
+					<div class="lenar-text-col">
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Imperdiet nulla malesuada pellentesque elit. Sit amet dictum sit amet justo donec. Dui sapien eget mi proin. Consequat semper viverra nam libero justo laoreet sit amet cursus.</p>
 					</div>
-					<div class="mainpage-skills">
-						<div class="mainpage-skill mainpage-skill-equipment">
-							<div class="mainpage-skill-text">Новейшее оборудование и передовые технологии</div>
-							<div class="mainpage-skill-img">
-								<img src="img/equipment.png" alt="">
-							</div>
-						</div>
-						<div class="mainpage-skill mainpage-skill-doctors">
-							<div class="mainpage-skill-text">Ведущие российские офтальмохирурги</div>
-							<div class="mainpage-skill-doctors-list">
-								<div class="mainpage-skill-doctor">
-									<img src="img/doctor1.png" alt="">
-								</div>
-								<div class="mainpage-skill-doctor">
-									<img src="img/doctor2.png" alt="">
-								</div>
-								<div class="mainpage-skill-doctor">
-									<img src="img/doctor1.png" alt="">
-								</div>
-								<div class="mainpage-skill-doctor">
-									<img src="img/doctor2.png" alt="">
-								</div>
-								<div class="mainpage-skill-doctor">+</div>
-							</div>
-						</div>
+					<div class="lenar-text-col">
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Imperdiet nulla malesuada pellentesque elit. Sit amet dictum sit amet justo donec. Dui sapien eget mi proin. Consequat semper viverra nam libero.</p>
 					</div>
 				</div>
 			</div>
 		</section>
-		<section class="section section-mainpage-reviews">
+		<section class="section section-stats">
 			<div class="container">
-				<div class="welcome-info">
-					<h2 class="welcome-title h2">Помогаем восстанавливать <br>и сохранять здоровое зрение</h2>
-					<div class="welcome-text page-subtitle">Истории пациентов, которые прошли лечение в клинике «ЛЕНАР»</div>
-				</div>
-				<div class="reviews-mainpage">
-					<a href="video/test.mp4" class="review-mainpage" data-fancybox="reviews-gallery" data-ratio="0.5625" data-src="video/test.mp4">
-						<img src="video/testvideo-preview.jpg" alt="">
-					</a>
-					<a href="https://www.youtube.com/embed/NpYkTMkphek" data-fancybox="reviews-gallery" data-ratio="0.5625" class="review-mainpage">
-						<img src="img/reviewer1.png" alt="Человек с отзывом">
-					</a>
-					<a href="https://www.youtube.com/embed/RERCDv2zb6M" data-fancybox="reviews-gallery" data-ratio="0.5625" class="review-mainpage">
-						<img src="img/reviewer2.png" alt="Человек с отзывом">
-					</a>
-					<a href="video/test.mp4" class="review-mainpage" data-fancybox="reviews-gallery" data-ratio="0.5625" data-src="video/test.mp4">
-						<img src="video/testvideo-preview.jpg" alt="">
-					</a>
-					<a href="https://www.youtube.com/embed/NpYkTMkphek" data-fancybox="reviews-gallery" data-ratio="0.5625" class="review-mainpage">
-						<img src="img/reviewer1.png" alt="Человек с отзывом">
-					</a>
+				<div class="stats-block animateMe" data-animation="fadeInUp">
+					<div class="stat animateMe" data-animation="fadeInUp">
+						<div class="stat-count count_me" data-from="0" data-to="4">4</div>
+						<div class="stat-text">клиники</div>
+					</div>
+					<div class="stat animateMe" data-animation="fadeInUp" data-animation-delay="0.2s">
+						<div class="stat-count count_me" data-from="0" data-to="25">25</div>
+						<div class="stat-text">лет опыта</div>
+					</div>
+					<div class="stat animateMe" data-animation="fadeInUp" data-animation-delay="0.4s">
+						<div class="stat-count count_me" data-from="0" data-to="90">90</div>
+						<div class="stat-text">специалистов</div>
+					</div>
+					<div class="stat animateMe" data-animation="fadeInUp" data-animation-delay="0.6s">
+						<div class="stat-count"><span class="count_me" data-from="82000" data-to="82700">82 700</span>+</div>
+						<div class="stat-text">проведенных операций</div>
+					</div>
 				</div>
 			</div>
 		</section>

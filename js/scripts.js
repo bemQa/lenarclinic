@@ -152,38 +152,39 @@ $(document).ready(function() {
         });
     };
     
-    if ( $('.stats-block').length ) {
-        $(window).scroll(function(){
-            let oftop = $(this).scrollTop();
-            let counters = $('.stats-block').offset().top;
-            let percent = $(window).height() * 0.8;
-            if ( oftop > counters-percent ) {
-                countMe();
-            }
-        });
-    }
+    // if ( $('.stat-count').length ) {
+    //     $(window).scroll(function(){
+    //         let oftop = $(this).scrollTop();
+    //         let counters = $('.stat-count').parent().parent().offset().top;
+    //         let percent = $(window).height() * 0.8;
+    //         if ( oftop > counters-percent ) {
+    //             countMe();
+    //         }
+    //     });
+    //     countMe();
+    // }
 
     $('.youtube-iframe').click(function(){
         $('.youtube-iframe').removeClass('active').addClass('inactive');
         $(this).removeClass('inactive').addClass('active');
     });
 
-    if($(window).innerWidth() > 480) {
-        $('.review-mainpage').mouseover(function(e) {
-            $(this).addClass('first')
-            if($(this).index() == 2) {
-                $('.review-mainpage:eq(0)').addClass('third');
-            } else if($(this).index() == 1) {
-                $('.review-mainpage:eq(0), .review-mainpage:eq(2)').addClass('third');
-            } else if($(this).index() == 0) {
-                $(this).css({'scale':'1.1'});
-            }
-        });
+    // if($(window).innerWidth() > 480) {
+    //     $('.review-mainpage').mouseover(function(e) {
+    //         $(this).addClass('first')
+    //         if($(this).index() == 2) {
+    //             $('.review-mainpage:eq(0)').addClass('third');
+    //         } else if($(this).index() == 1) {
+    //             $('.review-mainpage:eq(0), .review-mainpage:eq(2)').addClass('third');
+    //         } else if($(this).index() == 0) {
+    //             $(this).css({'scale':'1.1'});
+    //         }
+    //     });
     
-        $('.review-mainpage').mouseout(function(e) {
-            $('.review-mainpage').removeClass('first second third').css({'scale':''});
-        });
-    }
+    //     $('.review-mainpage').mouseout(function(e) {
+    //         $('.review-mainpage').removeClass('first second third').css({'scale':''});
+    //     });
+    // }
 
     // попап отзывов
     $('body').on('click', '.review-open', function(e) {

@@ -1118,39 +1118,202 @@ h4,
 
 .mainpage-wrapper {
     position: relative;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16rem 40rem;
     z-index: 1;
 }
 
 .mainpage-info {
-    max-width: 635rem;
+    max-width: 660rem;
     width: 100%;
+    grid-column-end: span 1;
+}
+
+.mainpage-info .page-title {
+    font-size: 56rem;
+    letter-spacing: -2%;
+}
+
+.mainpage-info .page-subtitle {
+    font-size: 24rem;
+    line-height: 135%;
+    color: rgba(37, 37, 37, .75);
 }
 
 .mainpage-info .btn {
-    margin-top: 30rem;
-    color: #252525 !important;
+    margin-top: 40rem;
 }
 
-.mainpage-info .btn::after {
+/* .mainpage-info .btn::after {
     background: url(../img/icons/arrow-right.svg) center/contain no-repeat;
     transition: all .2s linear;
 }
 
 .mainpage-info .btn:hover::after {
     background: url(../img/icons/arrow-right-white.svg) center/contain no-repeat;
+} */
+
+.mainpage-video {
+    position: relative;
+    max-width: 660rem;
+    width: 100%;
+    height: 450rem;
+    border-radius: 32rem;
+    overflow: hidden;
+    grid-column-end: span 1;
+}
+
+.mainpage-video video {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    object-fit: cover;
+}
+
+.mainpage-stats-block {
+    display: flex;
+    align-items: flex-end;
+    gap: 0 64rem;
+    grid-column-end: span 1;
+}
+
+.mainpage-skills {
+    display: flex;
+    justify-content: space-between;
+    gap: 16rem;
+    grid-column-end: span 1;
+}
+
+.mainpage-skill {
+    position: relative;
+    max-width: 322rem;
+    width: 100%;
+    padding: 8rem;
+    background: #fff;
+    border-radius: 24rem;
+}
+
+.mainpage-skill-equipment {
+    display: flex;
+    align-items: center;
+    gap: 16rem;
+}
+
+.mainpage-skill-text {
+    font-weight: 600;
+    font-size: 16rem;
+    line-height: 115%;
+}
+
+.mainpage-skill-equipment .mainpage-skill-text {
+    padding: 16rem 0 16rem 16rem;
+}
+
+.mainpage-skill-img {
+    position: relative;
+    min-width: 152rem;
+    width: 152rem;
+    height: 140rem;
+    border-radius: 24rem;
+    overflow: hidden;
+}
+
+.mainpage-skill-img img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    object-fit: cover;
+}
+
+.mainpage-skill-doctors {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 16rem;
+    padding: 24rem;
+}
+
+.mainpage-skill-doctors .mainpage-skill-text {
+    text-align: center;
+}
+
+.mainpage-skill-doctors-list {
+    display: flex;
+    align-items: center;
+}
+
+.mainpage-skill-doctor {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 56rem;
+    min-width: 56rem;
+    height: 56rem;
+    background: #BFCADD;
+    border: 1rem solid #fff;
+    border-radius: 56rem;
+    font-weight: 700;
+    font-size: 16rem;
+    line-height: 16rem;
+    color: #fff;
+    overflow: hidden;
+}
+
+.mainpage-skill-doctor img {
+    position: absolute;
+    inset: 0;
+    margin: auto;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.mainpage-skill-doctor:not(:first-child) {
+    margin-left: -10rem;
+}
+
+.section-mainpage-reviews {
+    padding: 0;
+}
+
+.welcome-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 16rem;
+    text-align: center;
+    max-width: 744rem;
+    width: 100%;
+    margin: 0 auto 48rem;
+}
+
+.welcome-title {
+    font-size: 48rem;
+    line-height: 105%;
+    letter-spacing: -2%;
+}
+
+.welcome-text {
+    font-size: 24rem;
+    line-height: 150%;
 }
 
 .reviews-mainpage {
     position: relative;
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    max-width: 635rem;
+    align-items: flex-start;
     width: 100%;
-    height: 440rem;
+    height: 350rem;
+    overflow: hidden;
 }
 
 .review-mainpage {
@@ -1160,48 +1323,19 @@ h4,
     justify-content: center;
     width: 248rem;
     height: 440rem;
-    border-radius: 40rem;
+    border-radius: 24rem;
     box-shadow: 0rem 0rem 50rem 0rem rgba(0, 0, 0, 0.05);
     overflow: hidden;
     transition: all .35s linear;
 }
 
-.review-mainpage:nth-child(1) {
-    transition-delay: 0.1s;
-}
-
-.review-mainpage:nth-child(2) {
-    width: 190rem;
-    height: 340rem;
-    border-radius: 32rem;
+.review-mainpage:nth-child(2),
+.review-mainpage:nth-child(4) {
+    margin-top: 86rem;
 }
 
 .review-mainpage:nth-child(3) {
-    width: 138rem;
-    height: 240rem;
-    border-radius: 24rem;
-}
-
-.review-mainpage.first {
-    width: 248rem;
-    height: 440rem;
-    border-radius: 40rem;
-}
-
-.review-mainpage.second {
-    width: 190rem;
-    height: 340rem;
-    border-radius: 32rem;
-}
-
-.review-mainpage.third {
-    width: 138rem;
-    height: 240rem;
-    border-radius: 24rem;
-}
-
-.review-mainpage:hover {
-    box-shadow: 0rem 0rem 50rem 0rem rgba(0, 0, 0, 0.2);
+    margin-top: 56rem;
 }
 
 .review-mainpage img {
@@ -1303,20 +1437,25 @@ h4,
 }
 
 .stat {
+    display: flex;
+    align-items: center;
+    gap: 12rem;
     width: max-content;
 }
 
 .stat-count {
-    margin-bottom: 10rem;
     font-weight: 600;
-    font-size: 72rem;
+    font-size: 48rem;
     line-height: 1;
-    color: #1066F6;
+    letter-spacing: -2%;
+    color: #252525;
 }
 
 .stat-text {
-    font-size: 24rem;
-    line-height: 1;
+    max-width: 104rem;
+    font-size: 16rem;
+    line-height: 115%;
+    color: rgba(37, 37, 37, .75);
 }
 
 .cards-block {
@@ -4088,7 +4227,15 @@ textarea.input-text {
     }
 
     .mainpage-wrapper {
-        flex-direction: column;
+        gap: 32rem;
+    }
+
+    .mainpage-info {
+        grid-column-end: span 2;
+    }
+
+    .mainpage-info .page-title {
+        font-size: 32rem;
     }
 
     .section-mainpage .page-subtitle {
@@ -4096,22 +4243,78 @@ textarea.input-text {
     }
 
     .mainpage-info .btn {
-        margin-top: 20rem;
+        margin-top: 24rem;
+    }
+
+    .mainpage-video {
+        height: 350rem;
+        margin-top: 28rem;
+        border-radius: 20rem;
+        grid-column-end: span 2;
+    }
+
+    .mainpage-stats-block {
+        gap: 20rem;
+        grid-column-end: span 2;
+    }
+
+    .mainpage-skills {
+        flex-direction: column;
+        grid-column-end: span 2;
+    }
+
+    .mainpage-skill {
+        max-width: 100%;
+    }
+
+    .mainpage-skill-doctors {
+        padding: 20rem;
+    }
+    
+    .section-mainpage-reviews {
+        padding: 0;
+    }
+
+    .section-mainpage-reviews .container {
+        padding: 0;
+    }
+
+    .welcome-info {
+        padding: 0 20rem;
+        text-align: left;
+        margin-bottom: 32rem;
+    }
+
+    .welcome-text {
+        font-size: 16rem;
     }
 
     .reviews-mainpage {
         width: 100%;
         height: auto;
-        margin-top: 60rem;
+        padding: 0 20rem;
+        gap: 0 20rem;
+        overflow-x: scroll;
+        -ms-overflow-style: none;
+        scrollbar-width: none;
     }
 
-    .review-mainpage,
-    .review-mainpage:nth-child(2),
-    .review-mainpage:nth-child(3) {
-        width: 136rem;
-        min-width: 136rem;
-        height: 242rem;
+    .reviews-mainpage::-webkit-scrollbar {
+        width: 0;
+        height: 0;
+    }
+
+    .review-mainpage {
+        width: 210rem;
+        min-width: 210rem;
+        height: 315rem;
         border-radius: 20rem;
+    }
+
+    .review-mainpage:nth-child(2),
+    .review-mainpage:nth-child(3), 
+    .review-mainpage:nth-child(4) {
+        margin-top: 0;
     }
 
     .review-mainpage::after {
@@ -4150,11 +4353,18 @@ textarea.input-text {
         padding: 30rem 35rem;
     }
 
+    .stat {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 6rem;
+    }
+
     .stat-count {
-        font-size: 40rem;
+        font-size: 32rem;
     }
 
     .stat-text {
+        max-width: 100%;
         font-size: 14rem;
     }
 
@@ -5157,23 +5367,6 @@ textarea.input-text {
 
     .footer-menu-link {
         font-size: 16rem;
-    }
-
-    .review-mainpage, 
-    .review-mainpage:nth-child(2), 
-    .review-mainpage:nth-child(3) {
-        width: 110rem;
-        min-width: 110rem;
-        height: 196rem;
-    }
-
-    .review-mainpage::after {
-        width: 14rem;
-        height: 14rem;
-    }
-
-    .review-mainpage:not(:last-child) {
-        margin-right: 10rem;
     }
 
     .card-about .card-img {
